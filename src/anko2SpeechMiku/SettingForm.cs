@@ -15,14 +15,15 @@ namespace anko2SpeachMiku {
 		private Form _hostForm = null;
 		private Config _configData = new Config();
 
-        private BoyomiDictionary boyomichanDictionary;
+        private BoyomiDictionary _boyomichanDictionary;
+        public BoyomiDictionary boyomichanDictionary { get { return _boyomichanDictionary; } }
 
 		// プラグインが動作してるときtrueを返すようにすること
 		public bool IsRun { get; private set; }
 
 		public SettingForm(ankoPlugin2.IPluginHost host) {
 			InitializeComponent();
-            boyomichanDictionary = new BoyomiDictionary();
+            _boyomichanDictionary = new BoyomiDictionary();
 			this._host = host;
 			this._hostForm = (Form)host.Win32WindowOwner;
 			ConfigLoad();
@@ -257,14 +258,16 @@ namespace anko2SpeachMiku {
             }
         }
 
-
         /// <summary>
         /// 辞書ファイルを開く
         /// </summary>
         private void OpenDictionary()
         {
-           var result = boyomichanDictionary.Open(label_boyomiFilePath.Text);
+           var result = _boyomichanDictionary.Open(label_boyomiFilePath.Text);
            if (!result) { label_boyomiFilePath.Text = ""; }
+           var bindingSource = new BindingSource();
+           this.gridViewDictionary.DataSource = bindingSource;
+           bindingSource.DataSource = _boyomichanDictionary.dicWordList;
         }
 	}
 }

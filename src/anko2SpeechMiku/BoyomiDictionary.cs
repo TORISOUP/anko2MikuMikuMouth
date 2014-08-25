@@ -13,15 +13,8 @@ namespace anko2SpeachMiku
     /// </summary>
     class BoyomiDictionary
     {
-
-        struct DicWord
-        {
-            public int priority;
-            public string targetString;
-            public string replaceString;
-        }
-
-        List<DicWord> dicWordList = new List<DicWord>();
+        List<DicWord> _dicWordList = new List<DicWord>();
+        public List<DicWord> dicWordList { get { return _dicWordList; } }
 
         /// <summary>
         /// 辞書ファイルを開く
@@ -30,6 +23,8 @@ namespace anko2SpeachMiku
         /// <returns></returns>
         public bool Open(string filePath)
         {
+            _dicWordList.Clear();
+
             //ファイルが存在しねぇ
             if (!File.Exists(filePath)) { return false; }
 
@@ -49,7 +44,7 @@ namespace anko2SpeachMiku
                         wd.priority = Int32.Parse(values[0]);
                         wd.targetString = values[2];
                         wd.replaceString = values[3].Replace("\\", "").Replace("'", "");
-                        dicWordList.Add(wd);
+                        _dicWordList.Add(wd);
                     }
                 }
             }
@@ -65,8 +60,9 @@ namespace anko2SpeachMiku
         //指定の文字列を辞書を元に置換する
         public string Replace(string original)
         {
+            if (_dicWordList == null || _dicWordList.Count == 0) { return original; }
             var currentString = original.ToUpper();
-            dicWordList.OrderByDescending(x => x.priority).ToList().ForEach(x =>
+            _dicWordList.OrderByDescending(x => x.priority).ToList().ForEach(x =>
             {
                 currentString = currentString.Replace(x.targetString, x.replaceString);
 

@@ -71,6 +71,7 @@
     <Compile Include="BoyomiDictionary.cs" />
     <Compile Include="CommentInfo.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="DicWord.cs" />
     <Compile Include="IConfig.cs" />
     <Compile Include="kanax.cs" />
     <Compile Include="MojiConverter.cs" />

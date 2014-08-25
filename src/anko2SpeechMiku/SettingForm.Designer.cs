@@ -25,6 +25,8 @@
 		private void InitializeComponent() {
             this.OpenBoyomichanDictionaryPathButton = new System.Windows.Forms.Button();
             this.label_boyomiFilePath = new System.Windows.Forms.Label();
+            this.gridViewDictionary = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDictionary)).BeginInit();
             this.SuspendLayout();
             // 
             // OpenBoyomichanDictionaryPathButton
@@ -40,22 +42,33 @@
             // label_boyomiFilePath
             // 
             this.label_boyomiFilePath.AutoSize = true;
-            this.label_boyomiFilePath.Location = new System.Drawing.Point(12, 55);
+            this.label_boyomiFilePath.Location = new System.Drawing.Point(19, 51);
             this.label_boyomiFilePath.Name = "label_boyomiFilePath";
             this.label_boyomiFilePath.Size = new System.Drawing.Size(0, 12);
             this.label_boyomiFilePath.TabIndex = 1;
+            // 
+            // gridViewDictionary
+            // 
+            this.gridViewDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewDictionary.Location = new System.Drawing.Point(12, 69);
+            this.gridViewDictionary.Name = "gridViewDictionary";
+            this.gridViewDictionary.RowTemplate.Height = 21;
+            this.gridViewDictionary.Size = new System.Drawing.Size(362, 450);
+            this.gridViewDictionary.TabIndex = 2;
             // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 475);
+            this.ClientSize = new System.Drawing.Size(382, 524);
+            this.Controls.Add(this.gridViewDictionary);
             this.Controls.Add(this.label_boyomiFilePath);
             this.Controls.Add(this.OpenBoyomichanDictionaryPathButton);
             this.Name = "SettingForm";
-            this.Text = "Setting";
+            this.Text = "設定";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SampleForm_FormClosing);
             this.Load += new System.EventHandler(this.SampleForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDictionary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,6 +78,7 @@
 
         private System.Windows.Forms.Button OpenBoyomichanDictionaryPathButton;
         private System.Windows.Forms.Label label_boyomiFilePath;
+        private System.Windows.Forms.DataGridView gridViewDictionary;
 
     }
 }
