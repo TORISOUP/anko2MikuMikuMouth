@@ -25,7 +25,7 @@ namespace anko2SpeachMiku
         {
             _dicWordList.Clear();
 
-            //ファイルが存在しねぇ
+            //ファイルが存在しない
             if (!File.Exists(filePath)) { return false; }
 
             try

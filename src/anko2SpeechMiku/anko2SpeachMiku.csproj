@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>anko2SpeachMiku</RootNamespace>
-    <AssemblyName>anko2MSpeachMiku</AssemblyName>
+    <AssemblyName>anko2SpeachMiku</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
