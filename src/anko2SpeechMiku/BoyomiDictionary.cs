@@ -51,6 +51,7 @@ namespace anko2SpeachMiku
             catch (System.Exception e)
             {
                 System.Console.WriteLine(e.Message);
+                _dicWordList.Clear();
                 return false;
             }
 
