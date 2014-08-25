@@ -3,5 +3,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>anko2\nicoView2.exe</StartProgram>
+    <StartArguments>/multi</StartArguments>
   </PropertyGroup>
 </Project>

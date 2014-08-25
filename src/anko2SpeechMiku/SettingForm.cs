@@ -10,20 +10,24 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace anko2SpeachMiku {
-	internal sealed partial class SampleForm : Form {
+	internal sealed partial class SettingForm : Form {
 		private ankoPlugin2.IPluginHost _host = null;
 		private Form _hostForm = null;
 		private Config _configData = new Config();
 
+        private BoyomiDictionary boyomichanDictionary;
+
 		// プラグインが動作してるときtrueを返すようにすること
 		public bool IsRun { get; private set; }
 
-		public SampleForm(ankoPlugin2.IPluginHost host) {
+		public SettingForm(ankoPlugin2.IPluginHost host) {
 			InitializeComponent();
-
+            boyomichanDictionary = new BoyomiDictionary();
 			this._host = host;
 			this._hostForm = (Form)host.Win32WindowOwner;
 			ConfigLoad();
+
+            OpenDictionary();
 
 			// アンコちゃんからのイベント（他のイベントは随時追加してください）
 			this._host.Initialized += new EventHandler(_host_Initialized);
@@ -132,8 +136,7 @@ namespace anko2SpeachMiku {
 			}
 
 			// 以下追加した変数に代入
-			_configData.alwaysRun = checkBoxAlwaysRun.Checked;
-
+            _configData.boyomichanDictionaryFilePath = label_boyomiFilePath.Text;
 
 			return _configData;
 		}
@@ -194,8 +197,7 @@ namespace anko2SpeachMiku {
 			}
 
 			// 以下追加した変数の復元
-			checkBoxAlwaysRun.Checked = configData.alwaysRun;
-
+            label_boyomiFilePath.Text = configData.boyomichanDictionaryFilePath;
 
 			return result;
 		}
@@ -240,10 +242,29 @@ namespace anko2SpeachMiku {
 
 		#endregion
 
-        private void checkBoxAlwaysRun_CheckedChanged(object sender, EventArgs e)
+        
+        private void OpenBoyomichanDictionaryPathButton_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.FileName = "ReplaceWord.dic";
+            ofd.Filter = "dicファイル(*.dic)|*.*";
+            ofd.Title = "dicファイルを選択してください";
+            ofd.RestoreDirectory = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                this.label_boyomiFilePath.Text = ofd.FileName;
+                OpenDictionary();
+            }
         }
 
+
+        /// <summary>
+        /// 辞書ファイルを開く
+        /// </summary>
+        private void OpenDictionary()
+        {
+           var result = boyomichanDictionary.Open(label_boyomiFilePath.Text);
+           if (!result) { label_boyomiFilePath.Text = ""; }
+        }
 	}
 }

@@ -17,7 +17,10 @@ namespace anko2SpeachMiku {
 		#endregion
 
 		// 以下保存したい変数
-		public bool alwaysRun { get; set; }
+        /// <summary>
+        /// 棒読みちゃんの辞書ファイルへのパス
+        /// </summary>
+        public string boyomichanDictionaryFilePath { get; set; }
 
 		public Config() {
 			this.locationX = 0;
@@ -26,7 +29,7 @@ namespace anko2SpeachMiku {
 			this.windowHeight = 480;
 
 			// 以下保存したい変数の初期化
-			alwaysRun = false;
+            boyomichanDictionaryFilePath = String.Empty;
 
 		}
 

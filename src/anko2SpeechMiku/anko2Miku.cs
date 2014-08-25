@@ -11,13 +11,13 @@ namespace anko2SpeachMiku {
 	/// </summary>
 	public sealed class anko2Miku : ankoPlugin2.IPlugin {
 		private ankoPlugin2.IPluginHost _host = null;
-		private SampleForm _form = null;
+		private SettingForm _form = null;
         private TCPListenerManager tcpThread;
 
         public anko2Miku()
         {
             tcpThread = new TCPListenerManager();
-            tcpThread.ServerStart();
+       //     tcpThread.ServerStart();
         }
 
 		#region ankoPlugin2.IPluginの実装
@@ -28,7 +28,7 @@ namespace anko2SpeachMiku {
 			}
 			set {
 				_host = value;
-				_form = new SampleForm(value);
+				_form = new SettingForm(value);
                 _host.ReceiveChat += _host_ReceiveChat;
 			}
 		}
@@ -72,8 +72,6 @@ namespace anko2SpeachMiku {
 				_form.WindowState = System.Windows.Forms.FormWindowState.Normal;
 			}
 		}
-
 		#endregion
-
 	}
 }
