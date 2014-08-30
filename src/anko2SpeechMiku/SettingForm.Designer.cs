@@ -64,8 +64,9 @@
             this.Controls.Add(this.gridViewDictionary);
             this.Controls.Add(this.label_boyomiFilePath);
             this.Controls.Add(this.OpenBoyomichanDictionaryPathButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SettingForm";
-            this.Text = "設定";
+            this.Text = "みくみくまうす-辞書設定";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SampleForm_FormClosing);
             this.Load += new System.EventHandler(this.SampleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDictionary)).EndInit();

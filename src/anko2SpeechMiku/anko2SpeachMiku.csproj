@@ -8,8 +8,8 @@
     <ProjectGuid>{8737A2DA-D09B-4996-B08E-24A9D921AF73}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>anko2SpeachMiku</RootNamespace>
-    <AssemblyName>anko2SpeachMiku</AssemblyName>
+    <RootNamespace>anko2MikuMikuMouth</RootNamespace>
+    <AssemblyName>anko2MikuMikuMouth</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

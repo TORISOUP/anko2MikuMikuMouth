@@ -68,12 +68,12 @@ namespace anko2SpeachMiku
 
         public string Name
         {
-            get { return "しゃべるミクさん" + (_form.IsRun ? "（動作中）" : ""); }
+            get { return "みくみくまうすプラグイン" + (_form.IsRun ? "（動作中）" : ""); }
         }
 
         public string Description
         {
-            get { return "ミクさんがしゃべります"; }
+            get { return "みくみくまうすへコメント情報を送信します"; }
         }
 
         public bool IsAlive
