@@ -1,6 +1,6 @@
-anko2SpeechMiku
+anko2MikuMikuMouth
 ===============
-anko2SpeechMikuはやります！アンコちゃん用プラグインです。  
+anko2MikuMikuMouthはやります！アンコちゃん用プラグインです。  
 ニコ生のコメントをSocket接続された対象にコメント情報を逐次PUSH通知します。
 
 機能
@@ -24,7 +24,7 @@ Hiraganaにはひらがな変換されたコメント文が入っています。
 
 導入方法
 -------
-anko2SpeechMikuはLGPLライセンスに基づいたNMecabを使用しています。  
+anko2MikuMikuMouthはLGPLライセンスに基づいたNMecabを使用しています。  
 http://sourceforge.jp/projects/nmecab 
 
 LibNMecab.dllをplugins/以下に、
@@ -38,6 +38,6 @@ https://github.com/TORISOUP/ankochan2Unity
 
 著作権表記
 ------
-anko2SpeechMikuは修正BSDライセンスに基づくkanaxs C# 1.0.0を使用しています。  
+anko2MikuMikuMouthは修正BSDライセンスに基づくkanaxs C# 1.0.0を使用しています。  
 kanaxs C# 1.0.0 - Copyright (c) 2011, DOBON! <http://dobon.net>　All rights reserved.  
 http://wiki.dobon.net/index.php?free%2FkanaxsCSharp%2Flicense
