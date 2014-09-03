@@ -1,12 +1,12 @@
 anko2MikuMikuMouth
 ===============
-anko2MikuMikuMouth�͂��܂��I�A���R�����p�v���O�C���ł��B  
-�j�R���̃R�����g��Socket�ڑ����ꂽ�ΏۂɃR�����g���𒀎�PUSH�ʒm���܂��B
+anko2MikuMikuMouthはやります！アンコちゃん用プラグインです。  
+ニコ生のコメントをSocket接続された対象にコメント情報を逐次PUSH通知します。
 
-�@�\
+機能
 -------
-�N������ƃ|�[�g*50082*��TCP Socket�̑Ҏ���J�n���܂��B
-������TCP�Ōq�����ƂŃj�R���̃R�����g���󂯎�邱�Ƃ��ł��܂��B  �R�����g���͐V�����R�����g������x�Ɉȉ��̗v�f���܂܂ꂽJSON��PUSH����܂��B
+起動するとポート*50082*でTCP Socketの待受を開始します。
+ここにTCPで繋ぐことでニコ生のコメントを受け取ることができます。  コメント情報は新しいコメントが来る度に以下の要素が含まれたJSONがPUSHされます。
 
 * Anonymity
 * IsCaster
@@ -19,25 +19,25 @@ anko2MikuMikuMouth�͂��܂��I�A���R�����p�v���O�C���ł��B
 * Message
 * Hiragana
 
-Hiragana�ɂ͂Ђ炪�ȕϊ����ꂽ�R�����g���������Ă��܂��B  
-�������Ђ炪�Ȃɕϊ�����镶���͊����ƃJ�^�J�i�݂̂ł��B�A���t�@�x�b�g��L���͕ϊ�����܂���B
+Hiraganaにはひらがな変換されたコメント文が入っています。  
+ただしひらがなに変換される文字は漢字とカタカナのみです。アルファベットや記号は変換されません。
 
-�������@
+導入方法
 -------
-anko2MikuMikuMouth��LGPL���C�Z���X�Ɋ�Â���NMecab���g�p���Ă��܂��B  
+anko2MikuMikuMouthはLGPLライセンスに基づいたNMecabを使用しています。  
 http://sourceforge.jp/projects/nmecab 
 
-LibNMecab.dll��plugins/�ȉ��ɁA
-dic�����񂱂����{�́iexe������f�B���N�g���j�Ɠ����ꏊ�ɔz�u���Ă��������B
+LibNMecab.dllをplugins/以下に、
+dicをあんこちゃん本体（exeがあるディレクトリ）と同じ場所に配置してください。
 
 
-�g����
+使い方
 ------
-Unity�Ŏg���Ȃ�ȉ��̃X�N���v�g���g���ƕ֗��ł��B
-https://github.com/TORISOUP/ankochan2Unity
+Unityで使うなら以下のスクリプトを使うと便利です。
+https://github.com/TORISOUP/CommentViewer2Unity
 
-���쌠�\�L
+著作権表記
 ------
-anko2MikuMikuMouth�͏C��BSD���C�Z���X�Ɋ�Â�kanaxs C# 1.0.0���g�p���Ă��܂��B  
-kanaxs C# 1.0.0 - Copyright (c) 2011, DOBON! <http://dobon.net>�@All rights reserved.  
+anko2MikuMikuMouthは修正BSDライセンスに基づくkanaxs C# 1.0.0を使用しています。  
+kanaxs C# 1.0.0 - Copyright (c) 2011, DOBON! <http://dobon.net>　All rights reserved.  
 http://wiki.dobon.net/index.php?free%2FkanaxsCSharp%2Flicense
