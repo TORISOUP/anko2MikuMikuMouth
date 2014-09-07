@@ -17,27 +17,8 @@ anko2MikuMikuMouthはやります！アンコちゃん用プラグインです�
 * Premium
 * No
 * Message
-* Hiragana
-
-Hiraganaにはひらがな変換されたコメント文が入っています。  
-ただしひらがなに変換される文字は漢字とカタカナのみです。アルファベットや記号は変換されません。
-
-導入方法
--------
-anko2MikuMikuMouthはLGPLライセンスに基づいたNMecabを使用しています。  
-http://sourceforge.jp/projects/nmecab 
-
-LibNMecab.dllをplugins/以下に、
-dicをあんこちゃん本体（exeがあるディレクトリ）と同じ場所に配置してください。
-
 
 使い方
 ------
 Unityで使うなら以下のスクリプトを使うと便利です。
 https://github.com/TORISOUP/CommentViewer2Unity
-
-著作権表記
-------
-anko2MikuMikuMouthは修正BSDライセンスに基づくkanaxs C# 1.0.0を使用しています。  
-kanaxs C# 1.0.0 - Copyright (c) 2011, DOBON! <http://dobon.net>　All rights reserved.  
-http://wiki.dobon.net/index.php?free%2FkanaxsCSharp%2Flicense

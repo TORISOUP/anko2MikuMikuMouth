@@ -14,7 +14,7 @@ namespace anko2SpeachMiku
     class CommentInfo
     {
         DataContractJsonSerializer jsonSerializer;
-        public CommentInfo(LibAnko.chat chat,string hiragana)
+        public CommentInfo(LibAnko.chat chat)
         {
             jsonSerializer = new DataContractJsonSerializer(typeof(CommentInfo));
             this.Name = chat.Name;
@@ -26,7 +26,6 @@ namespace anko2SpeachMiku
             this.Premium = chat.Premium;
             this.ProfName = chat.ProfName;
             this.UserId = chat.UserId;
-            this.Hiragana = hiragana;
         }
 
         /// <summary>
@@ -65,7 +64,5 @@ namespace anko2SpeachMiku
         public string ProfName;
         [DataMember]
         public string UserId;
-        [DataMember]
-        public string Hiragana;
     }
 }

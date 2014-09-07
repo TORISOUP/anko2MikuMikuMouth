@@ -73,8 +73,6 @@
     <Compile Include="Config.cs" />
     <Compile Include="DicWord.cs" />
     <Compile Include="IConfig.cs" />
-    <Compile Include="kanax.cs" />
-    <Compile Include="MojiConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingForm.cs">
       <SubType>Form</SubType>

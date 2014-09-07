@@ -52,17 +52,8 @@ namespace anko2SpeachMiku
             {
                 return;
             }
-
-            //コメントを棒読みちゃんの辞書を元に置換する
-            var replacedMessage = _form.boyomichanDictionary.Replace(e.Chat.Message);
-
-            //ひらがな化
-            var hiragana = MojiConverter.ConvertToHiragana(replacedMessage);
-
-            Debug.WriteLine(hiragana);
-
             //コメント情報をjsonに変換する
-            var json = (new CommentInfo(e.Chat, hiragana)).ToJson();
+            var json = (new CommentInfo(e.Chat)).ToJson();
             tcpThread.SendToAll(json);
         }
 
