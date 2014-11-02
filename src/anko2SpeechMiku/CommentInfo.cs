@@ -26,6 +26,7 @@ namespace anko2SpeachMiku
             this.Premium = chat.Premium;
             this.ProfName = chat.ProfName;
             this.UserId = chat.UserId;
+            this.Mail = chat.Mail;
         }
 
         /// <summary>
@@ -64,5 +65,7 @@ namespace anko2SpeachMiku
         public string ProfName;
         [DataMember]
         public string UserId;
+        [DataMember]
+        public string Mail;
     }
 }

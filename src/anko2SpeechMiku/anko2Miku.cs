@@ -52,6 +52,7 @@ namespace anko2SpeachMiku
             {
                 return;
             }
+
             //コメント情報をjsonに変換する
             var json = (new CommentInfo(e.Chat)).ToJson();
             tcpThread.SendToAll(json);
