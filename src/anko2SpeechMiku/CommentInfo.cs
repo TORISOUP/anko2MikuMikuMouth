@@ -17,8 +17,17 @@ namespace anko2SpeachMiku
         public CommentInfo(LibAnko.chat chat)
         {
             jsonSerializer = new DataContractJsonSerializer(typeof(CommentInfo));
-            this.Name = chat.Name;
-            this.NickName = chat.NickName;
+            if (chat.userinfo != null)
+            {
+                this.Name = chat.userinfo.DisplayName;
+                this.NickName = chat.userinfo.CharaName;
+            }
+            else
+            {
+                this.Name = chat.Name;
+                this.NickName = chat.NickName;
+            }
+           
             this.Anonymity = chat.Anonymity;
             this.IsCaster = chat.IsCaster;
             this.Message = chat.Message;
