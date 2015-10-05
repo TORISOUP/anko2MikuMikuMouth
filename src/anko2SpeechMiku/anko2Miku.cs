@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
+using anko2MikuMikuMouth;
+using anko2SpeachMiku;
 
-namespace anko2SpeachMiku
+namespace anko2MikuMikuMouth
 {
     /// <summary>
     /// 
@@ -54,7 +56,8 @@ namespace anko2SpeachMiku
             }
 
             //コメント情報をjsonに変換する
-            var json = (new CommentInfo(e.Chat)).ToJson();
+            var json = (new RequestDataPackage(e.Chat)).ToJson();
+            Debug.WriteLine(json);
             tcpThread.SendToAll(json);
         }
 
