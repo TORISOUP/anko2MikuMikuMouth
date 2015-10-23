@@ -69,11 +69,11 @@
   <ItemGroup>
     <Compile Include="anko2Miku.cs" />
     <Compile Include="BoyomiDictionary.cs" />
-    <Compile Include="CommentInfo.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DicWord.cs" />
     <Compile Include="IConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDataPackage.cs" />
     <Compile Include="SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
